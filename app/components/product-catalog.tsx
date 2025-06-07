@@ -25,74 +25,74 @@ const products: Product[] = [
   {
     id: "1",
     name: "NPK 15-15-15 Premium",
-    brand: "AgroTech",
+    brand: "Syngenta",
     category: "fertilizer",
     price: 45.99,
     rating: 4.8,
     description: "Fertilizante balanceado ideal para todo tipo de cultivos",
     benefits: ["Crecimiento equilibrado", "Mayor rendimiento", "Fácil aplicación"],
     usage: "50-100 kg por hectárea",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "fertilizante1.jpg",
   },
   {
     id: "2",
     name: "BioControl Plus",
-    brand: "EcoFarm",
+    brand: "Monsanto",
     category: "pesticide",
     price: 32.5,
     rating: 4.6,
     description: "Control biológico de plagas sin residuos tóxicos",
     benefits: ["100% orgánico", "Sin residuos", "Seguro para abejas"],
     usage: "2-3 ml por litro de agua",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "fungisida.jpg",
   },
   {
     id: "3",
     name: "Semilla Híbrida Maíz H-350",
-    brand: "SeedMaster",
+    brand: "BASF SE",
     category: "seed",
     price: 89.99,
     rating: 4.9,
     description: "Semilla híbrida de alto rendimiento resistente a sequía",
     benefits: ["Alto rendimiento", "Resistente a sequía", "Ciclo corto"],
     usage: "20-25 kg por hectárea",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "semillas1.jpg",
   },
   {
     id: "4",
     name: "Urea Granulada 46%",
-    brand: "FertilMax",
+    brand: "ADAMA Ltd.",
     category: "fertilizer",
     price: 28.75,
     rating: 4.4,
     description: "Fertilizante nitrogenado de liberación rápida",
     benefits: ["Alto contenido de N", "Rápida absorción", "Económico"],
     usage: "100-150 kg por hectárea",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "fertilizante.jpg",
   },
   {
     id: "5",
     name: "Fungicida Sistémico Pro",
-    brand: "CropGuard",
+    brand: "Bunge",
     category: "pesticide",
     price: 67.2,
     description: "Fungicida sistémico para prevención y control",
     rating: 4.7,
     benefits: ["Acción preventiva", "Larga duración", "Amplio espectro"],
     usage: "1-2 ml por litro de agua",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "fungisida.jpg",
   },
   {
     id: "6",
     name: "Semilla Tomate Cherry",
-    brand: "VeggiePro",
+    brand: "Cargill",
     category: "seed",
     price: 15.99,
     rating: 4.5,
     description: "Semilla de tomate cherry de alta productividad",
     benefits: ["Frutos dulces", "Larga cosecha", "Resistente a enfermedades"],
     usage: "200-300 semillas por hectárea",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "semillas.jpg",
   },
 ]
 
@@ -211,8 +211,10 @@ export default function ProductCatalog() {
                   </CardHeader>
 
                   <CardContent className="space-y-3">
+                    {/* imagenes */}
                     <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-                      <Package className="h-12 w-12 text-gray-400" />
+                      {/* <Package className="h-12 w-12 text-gray-400" /> */}
+                      <img src={product.image} alt={product.name} className="max-h-24 object-contain" />
                     </div>
 
                     <p className="text-xs text-gray-600 line-clamp-2">{product.description}</p>
